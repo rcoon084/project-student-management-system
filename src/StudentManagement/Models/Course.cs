@@ -1,3 +1,4 @@
+namespace StudentManagement.Models;
 public class Course
 {
     //Course properties
