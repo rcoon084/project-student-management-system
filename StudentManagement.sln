@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{160FBF82-4591-409B-9FB3-B0FF461FD12C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentManagement", "src\StudentManagement\StudentManagement.csproj", "{155150EA-AEDF-4067-8F08-1CF6D3B238D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -10,5 +14,14 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{155150EA-AEDF-4067-8F08-1CF6D3B238D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{155150EA-AEDF-4067-8F08-1CF6D3B238D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{155150EA-AEDF-4067-8F08-1CF6D3B238D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{155150EA-AEDF-4067-8F08-1CF6D3B238D8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{155150EA-AEDF-4067-8F08-1CF6D3B238D8} = {160FBF82-4591-409B-9FB3-B0FF461FD12C}
 	EndGlobalSection
 EndGlobal
