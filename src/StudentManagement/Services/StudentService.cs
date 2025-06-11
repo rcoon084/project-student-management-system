@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using StudentManagement.Models;
 
 namespace StudentManagement.Services;
@@ -20,4 +21,20 @@ public class StudentService
         var newCourse = new Course(courseId, courseName, credits);
         courseList.Add(newCourse);
     }
+    public void GetAllStudents()
+    {
+        for (int i = 0; i < studentList.Count; i++)
+        {
+            Console.WriteLine(studentList[i].ToString() + "\n---------------------------");
+        }
+    }
+
+    public void GetAllCourses()
+    {
+        for (int i = 0; i < courseList.Count; i++)
+        {
+            Console.WriteLine(courseList[i].ToString() + "\n---------------------------");
+        }
+    }
+
 }
