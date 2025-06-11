@@ -16,6 +16,12 @@ public class StudentService
         studentList.Add(newStudent);
     }
 
+    public void CreateStudent(string firstName, string lastName, string gender, string id, string email, int semester, string mayor)
+    {
+        var newStudent = new Student(firstName, lastName, gender, id, email, semester, mayor);
+        studentList.Add(newStudent);
+    }
+
     public void CreateCourse(string courseId, string courseName, int credits)
     {
         var newCourse = new Course(courseId, courseName, credits);
