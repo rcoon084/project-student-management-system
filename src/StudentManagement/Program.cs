@@ -21,29 +21,72 @@ while (true)
             return;
         case "1":
             Console.WriteLine($"You entered {choice}: Create a student.");
-            Console.WriteLine("Please enter the following student data:");
-            Console.WriteLine("First Name: ");
-            var firstName = Console.ReadLine();
-            Console.WriteLine();
-            Console.WriteLine("Last Name: ");
-            var lastName = Console.ReadLine();
-            Console.WriteLine();
-            Console.WriteLine("ID: ");
-            var studentID = Console.ReadLine();
+            Console.WriteLine("Please choose:\n 1. Simple (3 arguments)\n2. Complete (8 arguments)");
+            var inputChoice = Console.ReadLine();
+            switch (inputChoice)
+            {
+                default:
+                    Console.WriteLine($"{choice} is not a valid option. Please try again.");
+                    break;
+                case "1":
+                    Console.WriteLine("Please enter the following student data:");
+                    Console.WriteLine("First Name: ");
+                    var firstName = Console.ReadLine();
+                    Console.WriteLine();
+                    Console.WriteLine("Last Name: ");
+                    var lastName = Console.ReadLine();
+                    Console.WriteLine();
+                    Console.WriteLine("ID: ");
+                    var studentID = Console.ReadLine();
 
-            studentService.CreateStudent(firstName, lastName, studentID);
+                    studentService.CreateStudent(firstName, lastName, studentID);
 
-            Console.WriteLine("The student was created successfully: \n");
-            studentService.GetAllStudents();
+                    Console.WriteLine("The student was created successfully: \n");
+                    studentService.GetAllStudents();
+                    break;
+                case "2":
+                    Console.WriteLine("Please enter the following student data:");
+                    Console.WriteLine("First Name: ");
+                    firstName = Console.ReadLine();
+                    Console.WriteLine();
+                    Console.WriteLine("Last Name: ");
+                    lastName = Console.ReadLine();
+                    Console.WriteLine();
+                    Console.WriteLine("Gender: ");
+                    var gender = Console.ReadLine();
+                    Console.WriteLine();
+                    Console.WriteLine("ID: ");
+                    studentID = Console.ReadLine();
+                    Console.WriteLine();
+                    Console.WriteLine("Email: ");
+                    var email = Console.ReadLine();
+                    Console.WriteLine();
+                    Console.WriteLine("Semester: ");
+                    var semester = Console.ReadLine();
+                    int realSemester = int.Parse(semester);
+                    Console.WriteLine();
+                    Console.WriteLine("Mayor: ");
+                    var mayor = Console.ReadLine();
+                    Console.WriteLine();
 
+                    studentService.CreateStudent(firstName, lastName, gender, studentID, email, realSemester, mayor);
+
+                    Console.WriteLine("The student was created successfully: \n");
+                    studentService.GetAllStudents();
+                    break;
+            }
             break;
         case "2":
+            Console.WriteLine($"You entered {choice}: Create a course.");
             break;
         case "3":
+            Console.WriteLine($"You entered {choice}: Enroll a student in a course");
             break;
         case "4":
+            Console.WriteLine($"You entered {choice}: See all students.");
             break;
         case "5":
+            Console.WriteLine($"You entered {choice}: see all courses.");
             break;
 
     }
