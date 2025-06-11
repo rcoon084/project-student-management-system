@@ -37,4 +37,20 @@ public class StudentService
         }
     }
 
+    public void EnrollStudent(string studentID, string courseID)
+    {
+        Student? studentFound = studentList.FirstOrDefault(student => student.Id == studentID);
+        if (studentFound == null)
+        {
+            throw new ArgumentException("The student was not found.");
+        }
+        Course? courseFound = courseList.FirstOrDefault(course => course.CourseId == courseID);
+        if (courseFound == null)
+        {
+            throw new ArgumentException("The course was not found.");
+        }
+        var newEnroll = new Enrollment(studentID, courseID);
+        enrollmentList.Add(newEnroll);
+    }
+
 }
