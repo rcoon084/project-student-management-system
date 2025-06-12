@@ -80,7 +80,7 @@ while (true)
             Console.WriteLine($"You entered {choice}: Create a course.");
             Console.WriteLine("Please enter the following course data:");
             Console.WriteLine("Course ID: ");
-            var courseID= Console.ReadLine();
+            var courseID = Console.ReadLine();
             Console.WriteLine();
             Console.WriteLine("Course Name: ");
             var courseName = Console.ReadLine();
@@ -97,6 +97,18 @@ while (true)
             break;
         case "3":
             Console.WriteLine($"You entered {choice}: Enroll a student in a course");
+            Console.WriteLine("Please enter the following course data:");
+            Console.WriteLine("Course ID: ");
+            courseID = Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine("Student ID: ");
+            var studentIDs = Console.ReadLine();
+            Console.WriteLine();
+
+            studentService.EnrollStudent(studentIDs, courseID);
+
+            Console.WriteLine($"The student {studentIDs} was enrolled in course {courseID} successfully \n");
+            
             break;
         case "4":
             Console.WriteLine($"You entered {choice}: See all students.");

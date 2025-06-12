@@ -51,6 +51,7 @@ public class StudentService
             throw new ArgumentException("The student was not found.");
         }
         Course? courseFound = courseList.FirstOrDefault(course => course.CourseId == courseID);
+        Console.WriteLine(courseID + " " + courseFound);
         if (courseFound == null)
         {
             throw new ArgumentException("The course was not found.");
