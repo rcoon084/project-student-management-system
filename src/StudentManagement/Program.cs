@@ -78,6 +78,22 @@ while (true)
             break;
         case "2":
             Console.WriteLine($"You entered {choice}: Create a course.");
+            Console.WriteLine("Please enter the following course data:");
+            Console.WriteLine("Course ID: ");
+            var courseID= Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine("Course Name: ");
+            var courseName = Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine("Credits: ");
+            var stringCredits = Console.ReadLine();
+            var credits = int.Parse(stringCredits);
+
+            studentService.CreateCourse(courseID, courseName, credits);
+
+            Console.WriteLine("The course was created successfully: \n");
+            studentService.GetAllCourses();
+
             break;
         case "3":
             Console.WriteLine($"You entered {choice}: Enroll a student in a course");
