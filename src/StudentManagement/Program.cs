@@ -1,4 +1,5 @@
-﻿using StudentManagement.Models;
+﻿using System.Diagnostics;
+using StudentManagement.Models;
 using StudentManagement.Services;
 
 var studentService = new StudentService();
@@ -112,9 +113,11 @@ while (true)
             break;
         case "4":
             Console.WriteLine($"You entered {choice}: See all students.");
+            studentService.GetAllStudents();
             break;
         case "5":
-            Console.WriteLine($"You entered {choice}: see all courses.");
+            Console.WriteLine($"You entered {choice}: See all courses.");
+            studentService.GetAllCourses();
             break;
 
     }
