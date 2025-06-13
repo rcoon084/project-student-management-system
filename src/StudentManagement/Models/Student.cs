@@ -10,7 +10,7 @@ public class Student
     private string id;
     private string email;
     private int semester;
-    private string mayor;
+    private string major;
     private bool isActive;
 
     // Student accessors (Implementing encapsulation)
@@ -57,10 +57,10 @@ public class Student
         set { semester = value; }
     }
 
-    public string Mayor
+    public string Major
     {
-        get { return mayor; }
-        set { mayor = value; }
+        get { return major; }
+        set { major = value; }
     }
 
     public bool IsActive
@@ -86,7 +86,7 @@ public class Student
         Id = id;
         IsActive = true;
     }
-    public Student(string firstName, string lastName, string gender, string id, string email, int semester, string mayor)
+    public Student(string firstName, string lastName, string gender, string id, string email, int semester, string major)
     {
         if (string.IsNullOrWhiteSpace(firstName) || string.IsNullOrWhiteSpace(lastName))
         {
@@ -103,12 +103,20 @@ public class Student
         Id = id;
         Email = email;
         Semester = semester;
-        Mayor = mayor;
+        Major = major;
         IsActive = true;
     }
 
     public override string ToString()
     {
-        return $"{Id} : {FirstName} {LastName} - {Email}\nIs the student active? : {IsActive} \n Gender : {Gender} \nAge : {Age} \nCurrent Mayor : {Mayor} \n Semester : {Semester}";
+        return $"[STUDENT DETAILS]\n" +
+       $"ID:       {Id}\n" +
+       $"Name:     {FirstName} {LastName}\n" +
+       $"Email:    {Email}\n" +
+       $"Active:   {IsActive}\n" +
+       $"Gender:   {Gender}\n" +
+       $"Age:      {Age}\n" +
+       $"Major:    {Major}\n" +   
+       $"Semester: {Semester}";
     }
 }

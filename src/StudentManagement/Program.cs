@@ -66,11 +66,11 @@ while (true)
                     var semester = Console.ReadLine();
                     int realSemester = int.Parse(semester);
                     Console.WriteLine();
-                    Console.WriteLine("Mayor: ");
-                    var mayor = Console.ReadLine();
+                    Console.WriteLine("Major: ");
+                    var major = Console.ReadLine();
                     Console.WriteLine();
 
-                    studentService.CreateStudent(firstName, lastName, gender, studentID, email, realSemester, mayor);
+                    studentService.CreateStudent(firstName, lastName, gender, studentID, email, realSemester, major);
 
                     Console.WriteLine("The student was created successfully: \n");
                     studentService.GetAllStudents();

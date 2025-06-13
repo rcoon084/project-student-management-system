@@ -1,4 +1,5 @@
 namespace StudentManagement.Models;
+
 public class Course
 {
     //Course properties
@@ -84,6 +85,11 @@ public class Course
     //Course Methods
     public override string ToString()
     {
-        return $"{CourseId} : {CourseName}\n{Description}\nNumber of credits : {Credits}\nIs it available? : {IsAvailable}";
+        return $"[COURSE DETAILS]\n" +
+               $"ID:          {CourseId}\n" +
+               $"Name:        {CourseName}\n" +
+               $"Description: {Description}\n" +
+               $"Credits:     {Credits}\n" +
+               $"Available:   {IsAvailable}";
     }
 }
