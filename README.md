@@ -53,7 +53,7 @@ You will need the [.NET SDK](https://dotnet.microsoft.com/en-us/download) instal
 
 1.  **Clone the repository to your local machine:**
     ```sh
-    git clone [https://github.com/your-username/project-student-management-system.git](https://github.com/your-username/project-student-management-system.git)
+    git clone [https://github.com/rcoon084/project-student-management-system.git](https://github.com/rcoon084/project-student-management-system.git)
     ```
 
 2.  **Navigate to the project's source directory:**
